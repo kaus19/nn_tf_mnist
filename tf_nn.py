@@ -1,14 +1,4 @@
-#!/usr/bin/env python2
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Aug  4 11:40:30 2018
-
-@author: kaustubh
-"""
-
 import tensorflow as tf
-#import numpy as np
-#import matplotlib.pyplot as plt
 from tensorflow.examples.tutorials.mnist import input_data
 
 mnist = input_data.read_data_sets("/tmp/data/",one_hot=True)
@@ -73,4 +63,3 @@ with tf.Session() as sess:
           sess.run(accuracy, feed_dict={X:mnist.test.images,
                                         Y:mnist.test.labels}))
 
-#plt.imshow(np.reshape(mnist.test.images[1],[28,28]),cmap='gray')
